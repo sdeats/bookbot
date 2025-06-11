@@ -33,7 +33,7 @@ def sorted_dict(filepath):
         if group["char"].isalpha():
             letter = group["char"]
             number = group["num"]
-            print(letter,number)
+            print(f"{letter}:",number)
         else:
             pass
 

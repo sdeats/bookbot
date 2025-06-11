@@ -5,9 +5,9 @@ def get_book_text(filepath):
         print(file_contents)
 def main(filepath):
     print("======= BOOKBOT =======")
-    print(f"analyzing book found at {filepath}...")
+    print(f"Analyzing book found at {filepath}...")
     print("-------------- Word Count --------------")
-    print(f"found {word_count(filepath)} total words")
+    print(f"Found {word_count(filepath)} total words")
     print("------- Word Count -------")
     sorted_dict(filepath)
 main("books/frankenstein.txt")
