@@ -1,3 +1,4 @@
+import sys
 from stats import word_count,char_count,sorted_dict
 def get_book_text(filepath):
     with open(filepath) as f:
@@ -10,4 +11,9 @@ def main(filepath):
     print(f"Found {word_count(filepath)} total words")
     print("------- Word Count -------")
     sorted_dict(filepath)
-main("books/frankenstein.txt")
+try:
+    book = sys.argv[1]
+except IndexError:
+    print("Usage: python3 main.py <path_to_book>. Requires path to book")
+    sys.exit(1)
+main(book)
